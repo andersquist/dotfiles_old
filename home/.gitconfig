@@ -2,9 +2,8 @@
     l = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     d = diff --patch-with-stat
     c = clone --recursive
-    ca = !git add -A && git commit -av
+    #ca = !git add -A && git commit -av
     ci = commit
-    co = checkout
     go = checkout -B
     tags = tag -l
     remotes = remote -v
@@ -13,13 +12,17 @@
     s = status -sb
     st = status
     branches = branch -a
-    out = log --pretty=oneline --abbrev-commit --graph @{u}..
-    in = !git fetch && git log --pretty=oneline --abbrev-commit --graph ..@{u}
+
+[apply]
+    # Detect whitespace errors when applying a patch
+    whitespace = fix
 
 [core]
     # Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
+    excludesfile = /etc/.gitignore
     attributesfile = ~/.gitattributes
+    # Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
+    whitespace = space-before-tab,indent-with-non-tab,trailing-space
 
 [color]
     # Use colors in Git commands that are capable of colored output when outputting to the terminal
@@ -41,7 +44,7 @@
     # Include summaries of merged commits in newly created merge commit messages
     log = true
 [help]
-	autocorrect = 50
+	autocorrect = 2500
 
 
 # Use `origin` as the default remote on the `master` branch in all cases
@@ -63,10 +66,9 @@
 [url "git://gist.github.com/"]
     insteadOf = "gist:"
 [push]
-	default = simple
+	default = matching
 [credential]
 	helper = osxkeychain
 [user]
 	name = Peter Liljenberg
 	email = pl@speedledger.se
-
