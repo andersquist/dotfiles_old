@@ -4,6 +4,7 @@
     c = clone --recursive
     #ca = !git add -A && git commit -av
     ci = commit
+    co = checkout
     go = checkout -B
     tags = tag -l
     remotes = remote -v
