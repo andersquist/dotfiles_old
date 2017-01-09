@@ -64,7 +64,7 @@ brew cask install sonos
 
 brew install awscli
 brew install sbt
-brew cask install packer
+brew install packer
 brew cask install visualvm
 
 # Remove outdated versions from the cellar.
