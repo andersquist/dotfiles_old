@@ -73,6 +73,6 @@
 	helper = osxkeychain
 [user]
 	name = Peter Liljenberg
-	email = pl@speedledger.se
+	email = pliljenberg@gmail.com
 [pull]
 	rebase = true
