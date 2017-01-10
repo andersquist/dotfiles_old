@@ -5,10 +5,11 @@
 # Make sure we’re using the latest Homebrew.
 brew update
 
+brew tap caskroom/versions
+brew tap caskroom/fonts
+
 # Upgrade any already-installed formulae.
 brew upgrade
-
-brew tap caskroom/versions
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -40,6 +41,7 @@ brew install socat
 brew install tcpdump
 
 # Install other useful binaries.
+brew install npm
 brew install ack
 brew install dark-mode
 brew install git
@@ -55,6 +57,9 @@ brew cask install java
 brew cask install iterm2-beta
 brew cask install google-chrome
 brew cask install atom
+# Atom plug-ins
+apm install editorconfig
+
 brew cask install flux
 brew cask install dropbox
 brew cask install bankid
@@ -68,6 +73,8 @@ brew install awscli
 brew install sbt
 brew install packer
 brew cask install visualvm
+
+brew cask install font-source-code-pro
 
 # Remove outdated versions from the cellar.
 brew cleanup
