@@ -3,6 +3,8 @@
 # Install brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Passwordless sudo
+echo "petlil            ALL = (ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/petlil
 # Install applications
 ./brew.sh
 ./zsh.sh
