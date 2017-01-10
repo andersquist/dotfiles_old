@@ -75,7 +75,7 @@ brew install awscli
 brew install sbt
 brew install packer
 brew cask install visualvm
-
+brew install the_silver_searcher
 brew cask install font-source-code-pro
 
 # Remove outdated versions from the cellar.
