@@ -10,8 +10,11 @@
 
 # Symlink dot-files
 for file in .*; do
-	[ -r "$file" ] && [ -f "$file" ] && ln -s "$(pwd {BASH_SOURCE[0]})/$file" ~/$file;
+	[ -r "$file" ] && [ -f "$file" ] && ln -fs "$(pwd {BASH_SOURCE[0]})/$file" ~/$file;
 done
 
-
-# TODO TMUX config iTerm2?
+# Post installation
+open "http://www.joshfinnie.com/blog/auto-starting-tmux-in-iterm2/"
+echo "Set default color schema in iTerm2"
+echo "Set default font in iTerm2"
+echo "Configure atom"
