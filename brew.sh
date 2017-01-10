@@ -60,6 +60,8 @@ brew cask install atom
 # Atom plug-ins
 apm install editorconfig
 
+brew cask install tmux
+brew install reattach-to-user-namespace
 brew cask install flux
 brew cask install dropbox
 brew cask install bankid
