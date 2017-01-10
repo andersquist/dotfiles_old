@@ -66,12 +66,12 @@ zstyle ':completion:*' ignore-parents parent pwd
 
 zstyle ':completion::approximate*:*' prefix-needed false
 
+# Support CTRL-A CTRL-E
+bindkey -e
 
-
-
-# Alt arrow naviation
-bindkey "^[^[[D" backward-word
-bindkey "^[^[[C" forward-word
+# CTRL arrow naviation
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
 
 # Prompt
 # optionally define some options

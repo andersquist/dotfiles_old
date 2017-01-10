@@ -16,7 +16,7 @@ for file in .*; do
 done
 
 # Post installation
-open "http://www.joshfinnie.com/blog/auto-starting-tmux-in-iterm2/"
-echo "Set default color schema in iTerm2"
-echo "Set default font in iTerm2"
+echo "Load default color schema in iTerm2"
 echo "Configure atom"
+
+echo "Reboot :)"
