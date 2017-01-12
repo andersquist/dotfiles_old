@@ -21,10 +21,7 @@ brew install moreutils
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
-# Install Bash 4.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
-brew install bash
+
 brew tap homebrew/versions
 brew install bash-completion2
 
@@ -77,6 +74,8 @@ brew install packer
 brew cask install visualvm
 brew install the_silver_searcher
 brew cask install font-source-code-pro
+brew install ngrok
+brew install jq
 
 # Remove outdated versions from the cellar.
 brew cleanup
