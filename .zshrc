@@ -4,7 +4,7 @@ autoload -U compinit && compinit
 # Fish-like syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-for file in ~/.{path,prompt,exports,aliases,functions,extra}; do
+for file in ~/.{paths,prompt,exports,aliases,functions,extra,auths}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done
 
