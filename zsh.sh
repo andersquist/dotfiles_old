@@ -14,3 +14,9 @@ fi;
 
 # Setup prompt
 npm install --global pure-prompt
+
+# Docker completions
+mkdir -p ~/.zsh/completion
+ln -s /Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion ~/.zsh/completion/_docker
+ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion ~/.zsh/completion/_docker-compose
+ln -s /Applications/Docker.app/Contents/Resources/etc/docker-machine.zsh-completion ~/.zsh/completion/_docker-machine
