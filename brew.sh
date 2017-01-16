@@ -76,6 +76,8 @@ brew install the_silver_searcher
 brew cask install font-source-code-pro
 brew install ngrok
 brew install jq
+brew cask install postman
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
