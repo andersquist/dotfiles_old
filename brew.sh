@@ -78,6 +78,7 @@ brew install ngrok
 brew install jq
 brew cask install postman
 
+brew install rancher-cli
 
 # Remove outdated versions from the cellar.
 brew cleanup
