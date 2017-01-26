@@ -15,6 +15,9 @@ for file in .*; do
 	[ -r "$file" ] && [ -f "$file" ] && ln -fs "$(pwd {BASH_SOURCE[0]})/$file" ~/$file;
 done
 
+# Symlink .vim
+ln -fs "$(pwd {BASH_SOURCE[0]})/.vim" ~/.vim;
+
 # Post installation
 echo "Load default color schema in iTerm2"
 echo "Configure atom"
