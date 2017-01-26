@@ -4,11 +4,11 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Passwordless sudo
-echo "petlil            ALL = (ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/petlil
+echo "$(whoami)            ALL = (ALL) NOPASSWD: ALL" | sudo tee "/etc/sudoers.d/$(whoami)"
 # Install applications
 ./brew.sh
 ./zsh.sh
-./macos.sh
+./macos.sh axiom
 
 # Symlink dot-files
 for file in .*; do
