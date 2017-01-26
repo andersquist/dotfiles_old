@@ -23,3 +23,5 @@ echo "Load default color schema in iTerm2"
 echo "Configure atom"
 
 echo "Reboot :)"
+
+Set: Entry, ":New Bookmarks:0:Initial Text", Does Not Exist

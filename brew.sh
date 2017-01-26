@@ -74,7 +74,7 @@ brew install packer
 brew cask install visualvm
 brew install the_silver_searcher
 brew cask install font-source-code-pro
-brew install ngrok
+brew cask install ngrok
 brew install jq
 brew cask install postman
 
