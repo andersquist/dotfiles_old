@@ -39,9 +39,8 @@ prompt pure
 # Where it gets saved
 HISTFILE=~/.history
 
-# Remember about a years worth of history (AWESOME)
-SAVEHIST=10000
-HISTSIZE=10000
+SAVEHIST=1000000
+HISTSIZE=1000000
 
 # Don't overwrite, append!
 setopt APPEND_HISTORY

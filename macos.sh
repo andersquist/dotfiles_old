@@ -581,7 +581,7 @@ sudo mdutil -E / > /dev/null
 ###############################################################################
 # iTerm 2                                                          #
 ###############################################################################
-Install the iTerm2 theme
+#Install the iTerm2 theme
 open "./iterm2/peter.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
