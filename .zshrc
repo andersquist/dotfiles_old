@@ -12,11 +12,13 @@ done
 # Completions
 bindkey -M viins '\C-i' complete-word
 
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
+
 # Faster! (?)
 zstyle ':completion::complete:*' use-cache 1
 
 # case insensitive completion
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+#zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # color code completion!!!!  Wohoo!
 zstyle ':completion:*' list-colors "=(#b) #([0-9]#)*=36=31"
