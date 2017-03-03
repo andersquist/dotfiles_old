@@ -79,6 +79,7 @@ brew install jq
 brew cask install postman
 
 brew install rancher-cli
-
+brew install openvpn
+brew cask install tunnelblick
 # Remove outdated versions from the cellar.
 brew cleanup
