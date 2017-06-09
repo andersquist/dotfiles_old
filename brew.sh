@@ -81,5 +81,9 @@ brew cask install postman
 brew install rancher-cli
 brew install openvpn
 brew cask install tunnelblick
+
+brew install kubectl
+brew cask intellij-idea-ce
+
 # Remove outdated versions from the cellar.
 brew cleanup
