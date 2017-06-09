@@ -1,0 +1,14 @@
+export PATH=${PATH}:~/source/tools/bin
+export CODE_DIR=~/source
+
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
+
+#export BUILD_TOOLS_PATH=${CODE_DIR}/FerryIslands/build-tools
+export BUILD_TOOLS_PATH=${CODE_DIR}/FerryIslands/tm-build-tools
+
+export PATH=${PATH}:${BUILD_TOOLS_PATH}
+
+if [ type "$foobar_command_name" > /dev/null ]; then
+	source <(kubectl completion zsh)
+fi
