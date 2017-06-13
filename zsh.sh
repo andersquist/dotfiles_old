@@ -20,3 +20,14 @@ mkdir -p ~/.zsh/completion
 ln -s /Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion ~/.zsh/completion/_docker
 ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion ~/.zsh/completion/_docker-compose
 ln -s /Applications/Docker.app/Contents/Resources/etc/docker-machine.zsh-completion ~/.zsh/completion/_docker-machine
+
+# Symlink prompt-files
+for file in kubectl-prompt/*; do
+  filename=$(basename $file)
+	[ -r "$file" ] && [ -f "$file" ] && ln -fs "$(pwd {BASH_SOURCE[0]})/$file" ~/.zfunctions/$filename;
+done
+
+for file in pure-prompt/*; do
+  filename="$(basename $file)"
+	[ -r "$file" ] && [ -f "$file" ] && ln -fs "$(pwd {BASH_SOURCE[0]})/$file" ~/.zfunctions/$filename;
+done
