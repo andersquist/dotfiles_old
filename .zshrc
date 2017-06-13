@@ -1,6 +1,10 @@
-fpath=(~/.zsh/completion $fpath)
+fpath=("$HOME/.zsh/completion" "$HOME/.zfunctions" $fpath)
 autoload -U promptinit; promptinit
 autoload -U compinit && compinit
+autoload -U colors; colors
+
+# Kubectl prompt
+source "$HOME/source/dotfiles/kubectl-prompt/kubectl.zsh"
 
 # Fish-like syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

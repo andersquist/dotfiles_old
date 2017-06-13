@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 export PATH=${PATH}:~/source/tools/bin
 export CODE_DIR=~/source
 
@@ -9,6 +11,6 @@ export BUILD_TOOLS_PATH=${CODE_DIR}/FerryIslands/tm-build-tools
 
 export PATH=${PATH}:${BUILD_TOOLS_PATH}
 
-if [ type "$foobar_command_name" > /dev/null ]; then
+if type kubectl > /dev/null ; then
 	source <(kubectl completion zsh)
 fi
