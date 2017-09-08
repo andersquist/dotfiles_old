@@ -111,4 +111,7 @@ alias reload="exec $SHELL -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
+alias localkube='kubectl config use-context minikube'
+alias devkube='kubectl config use-context cluster1.kub.stena.io'
+
 function de { docker exec -it $1 bash }
