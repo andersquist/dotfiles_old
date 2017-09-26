@@ -21,6 +21,8 @@ ln -s /Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion ~/.z
 ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion ~/.zsh/completion/_docker-compose
 ln -s /Applications/Docker.app/Contents/Resources/etc/docker-machine.zsh-completion ~/.zsh/completion/_docker-machine
 
+mkdir -p ~/.zfunctions
+
 # Symlink prompt-files
 for file in kubectl-prompt/*; do
   filename=$(basename $file)

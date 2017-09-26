@@ -1,0 +1,7 @@
+caskroom/cask
+caskroom/drivers
+caskroom/fonts
+caskroom/versions
+homebrew/core
+homebrew/services
+johanhaleby/kubetail

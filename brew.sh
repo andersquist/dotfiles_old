@@ -5,11 +5,20 @@
 # Make sure we’re using the latest Homebrew.
 brew update
 
+# Upgrade any already-installed formulae.
+brew upgrade
+
 brew tap caskroom/versions
 brew tap caskroom/fonts
 
-# Upgrade any already-installed formulae.
-brew upgrade
+brew install $(< brew-packages)
+brew cask install $(< brew-cask-packages)
+
+for tap in $(cat brew-taps)
+do
+  brew tap ${tap}
+done
+exit
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
