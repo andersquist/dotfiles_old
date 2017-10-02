@@ -4,4 +4,5 @@ caskroom/fonts
 caskroom/versions
 homebrew/core
 homebrew/services
-johanhaleby/kubetail
+johanhaleby/eubetail
+garethr/kubeval

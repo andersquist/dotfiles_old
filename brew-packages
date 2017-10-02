@@ -24,6 +24,7 @@ jq
 kops
 kubernetes-cli
 kubetail
+kubeval
 lastpass-cli
 libevent
 libidn
@@ -62,3 +63,4 @@ xz
 zsh
 zsh-completions
 zsh-syntax-highlighting
+
