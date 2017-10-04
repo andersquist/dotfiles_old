@@ -8,6 +8,7 @@ bash-completion@2
 chromedriver
 coreutils
 dark-mode
+dvm
 findutils
 gdbm
 gettext
@@ -63,4 +64,3 @@ xz
 zsh
 zsh-completions
 zsh-syntax-highlighting
-
