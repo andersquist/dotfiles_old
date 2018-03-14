@@ -13,10 +13,6 @@ for file in ~/.{paths,prompt,exports,aliases,functions,extra,auths}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done
 
-# dvm
-[ -f /usr/local/opt/dvm/dvm.sh ] && . /usr/local/opt/dvm/dvm.sh
-[ -r /usr/local/etc/bash_completion.d/dvm ] && . /usr/local/etc/bash_completion.d/dvm
-
 # Completions
 bindkey -M viins '\C-i' complete-word
 

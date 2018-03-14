@@ -46,8 +46,10 @@
     # Include summaries of merged commits in newly created merge commit messages
     log = true
 [help]
-	autocorrect = 2500
+	autocorrect = 20
 
+[rerere]
+	enabled = 1
 
 # Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]
