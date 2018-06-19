@@ -1,4 +1,5 @@
 fpath=("$HOME/.zsh/completion" "$HOME/.zfunctions" $fpath)
+zstyle ':completion:*' ignored-patterns 'kubectl.docker'
 autoload -U promptinit; promptinit
 autoload -U compinit && compinit
 autoload -U colors; colors
