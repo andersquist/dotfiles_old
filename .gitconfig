@@ -13,6 +13,7 @@
     s = status -sb
     st = status
     branches = branch -a
+	up = pull --rebase --autostash
 
 [apply]
     # Detect whitespace errors when applying a patch
