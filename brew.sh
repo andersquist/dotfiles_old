@@ -49,7 +49,7 @@ brew install libidn
 brew install lzo
 brew install mas
 brew install moreutils
-brew install node
+brew install nvm
 brew install oniguruma
 brew install openssh
 brew install openssl
@@ -78,14 +78,11 @@ brew install vim
 brew install watch
 brew install wget
 brew install xz
-brew install zsh
-brew install zsh-completions
-brew install zsh-syntax-highlighting
 
 brew link --force gettext
 
 brew cask install atom
-brew cask install anyconnect
+brew cask install andqui/stena/anyconnect
 brew cask install backblaze
 brew cask install bankid
 brew cask install dropbox

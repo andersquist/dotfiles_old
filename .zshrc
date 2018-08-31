@@ -5,7 +5,12 @@ autoload -U compinit && compinit
 autoload -U colors; colors
 
 # Kubectl prompt
-source "$HOME/dotfiles/kubectl-prompt/kubectl.zsh"
+# Skip for now
+# source "$HOME/dotfiles/kubectl-prompt/kubectl.zsh"
+
+# nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # Fish-like syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
