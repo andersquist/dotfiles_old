@@ -14,7 +14,7 @@ brew tap caskroom/fonts
 brew tap caskroom/versions
 brew tap homebrew/core
 brew tap homebrew/services
-brew tap johanhaleby/eubetail
+brew tap johanhaleby/kubetail
 brew tap garethr/kubeval
 
 brew install ack
@@ -24,7 +24,6 @@ brew install awscli
 brew install bash
 brew install bash-completion2
 brew install bash-completion@2
-brew install chromedriver
 brew install coreutils
 brew install dark-mode
 brew install findutils
@@ -47,6 +46,7 @@ brew install lastpass-cli
 brew install libevent
 brew install libidn
 brew install lzo
+brew install mas
 brew install moreutils
 brew install node
 brew install oniguruma
@@ -88,6 +88,7 @@ brew cask install bankid
 brew cask install dropbox
 brew cask install font-source-code-pro
 brew cask install google-chrome
+brew cask install chromedriver
 brew cask install iterm2-beta
 brew cask install java
 brew cask install minikube
@@ -108,6 +109,9 @@ brew cask install microsoft-teams
 brew cask install microsoft-office
 brew cask install citrix-receiver
 brew cask install jetbrains-toolbox
+
+# mas from Brewfile
+brew bundle install
 
 # Remove outdated versions from the cellar.
 brew cleanup
