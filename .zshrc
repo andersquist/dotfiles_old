@@ -5,7 +5,7 @@ autoload -U compinit && compinit
 autoload -U colors; colors
 
 # Kubectl prompt
-source "$HOME/source/dotfiles/kubectl-prompt/kubectl.zsh"
+source "$HOME/dotfiles/kubectl-prompt/kubectl.zsh"
 
 # Fish-like syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

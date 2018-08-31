@@ -16,6 +16,7 @@ brew tap homebrew/core
 brew tap homebrew/services
 brew tap johanhaleby/kubetail
 brew tap garethr/kubeval
+brew tap andqui/stena
 
 brew install ack
 brew install autoconf
@@ -57,6 +58,7 @@ brew install openconnect
 brew install pcre
 brew install pkg-config
 brew install python3
+brew install pipenv
 brew install readline
 brew install reattach-to-user-namespace
 brew install sbt
@@ -83,6 +85,7 @@ brew install zsh-syntax-highlighting
 brew link --force gettext
 
 brew cask install atom
+brew cask install anyconnect
 brew cask install backblaze
 brew cask install bankid
 brew cask install dropbox
@@ -112,6 +115,9 @@ brew cask install jetbrains-toolbox
 
 # mas from Brewfile
 brew bundle install
+
+# Accept Xcode license
+sudo xcodebuild -license accept
 
 # Remove outdated versions from the cellar.
 brew cleanup
