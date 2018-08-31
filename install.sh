@@ -9,6 +9,7 @@ fi
 echo "$(whoami)            ALL = (ALL) NOPASSWD: ALL" | sudo tee "/etc/sudoers.d/$(whoami)"
 # Install applications
 ./brew.sh
+./node.sh
 ./zsh.sh
 ./macos.sh ultra
 
