@@ -34,6 +34,7 @@ oniguruma
 openssh
 openssl
 openssl@1.1
+openconnect
 pcre
 pkg-config
 python3
