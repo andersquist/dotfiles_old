@@ -106,13 +106,13 @@ alias path='echo -e ${PATH//:/\\n}'
 
 function de { docker exec -it $1 bash }
 
-function kc { kubectl --context adfenix-$1-k8s.adfenix.com ${@:2}}
+#function kc { kubectl --context adfenix-$1-k8s.adfenix.com ${@:2}}
 
-alias deploy ${ADFENIX_COURCE_DIR}/adfenix-build-tools/deploy
+#alias deploy ${ADFENIX_COURCE_DIR}/adfenix-build-tools/deploy
 
 function format { scalariform . -r -p=.scalariform.conf }
 
-function pr { open 'https://github.com/pulls?user=adfenix' }
+#function pr { open 'https://github.com/pulls?user=adfenix' }
 
 function ecr  { eval $(aws ecr get-login | sed 's/-e none//g') }
 
