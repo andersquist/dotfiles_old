@@ -6,8 +6,10 @@ mkdir ~/.nvm
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-nvm install 8.11.4
-nvm use 8.11.4
-nvm alias default 8.11.4
+export NODE_VERSION=10.9.0
+
+nvm install $NODE_VERSION
+nvm use $NODE_VERSION
+nvm alias default $NODE_VERSION
 
 npm install -g npm
