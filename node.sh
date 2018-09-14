@@ -2,7 +2,8 @@
 
 # nvm should have been installed by brew...
 
-mkdir ~/.nvm
+# We don't care if it exists...
+mkdir ~/.nvm &> /dev/null
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
