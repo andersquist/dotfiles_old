@@ -6,4 +6,4 @@ mas "Patterns", id: 429449079
 mas "PDF Expert", id: 1055273043
 mas "Quiver", id: 866773894
 mas "SQLPro for MSSQL", id: 828466809
-mas "Xcode", id: 497799835
+#mas "Xcode", id: 497799835
