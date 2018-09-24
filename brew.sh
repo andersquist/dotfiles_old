@@ -16,7 +16,6 @@ brew tap homebrew/core
 brew tap homebrew/services
 brew tap johanhaleby/kubetail
 brew tap garethr/kubeval
-brew tap andqui/stena
 
 brew install ack
 brew install autoconf
@@ -82,7 +81,6 @@ brew install xz
 brew link --force gettext
 
 brew cask install atom
-brew cask install andqui/stena/anyconnect
 brew cask install backblaze
 brew cask install bankid
 brew cask install dropbox
