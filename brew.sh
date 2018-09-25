@@ -105,7 +105,6 @@ brew cask install caffeine
 brew cask install snagit
 brew cask install microsoft-teams
 brew cask install microsoft-office
-brew cask install citrix-receiver
 brew cask install jetbrains-toolbox
 
 # mas from Brewfile
