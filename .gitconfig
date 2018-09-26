@@ -76,6 +76,6 @@
 	helper = osxkeychain
 [user]
 	name = Anders Quist
-	email = a@b.c
+	email = anders@qinfo.se
 [pull]
 	rebase = true
