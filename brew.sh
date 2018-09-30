@@ -106,6 +106,7 @@ brew cask install snagit
 brew cask install microsoft-teams
 brew cask install microsoft-office
 brew cask install jetbrains-toolbox
+brew cask install sonos
 
 # mas from Brewfile
 brew bundle install
