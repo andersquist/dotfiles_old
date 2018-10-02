@@ -726,6 +726,8 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:80:enabled NO" ~/Library/Preferences/com.apple.symbolichotkeys.plist
 /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:81:enabled NO" ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
+# Set option-< shortcut for "Move focus to next window"
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 27 "{enabled = 1; value = { parameters = (60, 50, 1048576); type = 'standard'; }; }"
 
 ###############################################################################
 # Kill affected applications                                                  #
