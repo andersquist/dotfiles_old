@@ -35,6 +35,7 @@ brew install glide
 brew install gnu-sed
 brew install go
 brew install grep
+brew install heroku
 brew install httpie
 brew install icu4c
 brew install jq
