@@ -92,6 +92,7 @@ brew cask install google-chrome
 brew cask install chromedriver
 brew cask install iterm2-beta
 brew cask install java
+brew cask install java8
 brew cask install minikube
 brew cask install ngrok
 brew cask install postman
