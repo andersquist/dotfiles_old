@@ -84,6 +84,7 @@ brew link --force gettext
 brew cask install atom
 brew cask install backblaze
 brew cask install bankid
+brew cask install docker
 brew cask install dotnet-sdk
 brew cask install dropbox
 brew cask install font-source-code-pro
