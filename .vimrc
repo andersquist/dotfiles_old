@@ -1,6 +1,6 @@
-" Use the Solarized Dark theme
+" Use the Oceanic Next theme
 set background=dark
-colorscheme solarized
+colorscheme oceanic
 
 " Make Vim more useful
 set nocompatible
