@@ -4,6 +4,11 @@ autoload -U promptinit; promptinit
 autoload -U compinit && compinit
 autoload -U colors; colors
 
+# Workaround for path bug in PyCharm
+if [ $(echo $PATH | grep -c "/usr/local/bin") -eq 0 ]; then
+  export PATH=${PATH}:/usr/local/bin
+fi
+
 # Kubectl prompt
 # Skip for now
 # source "$HOME/dotfiles/kubectl-prompt/kubectl.zsh"
