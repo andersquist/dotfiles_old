@@ -49,6 +49,7 @@ brew install libevent
 brew install libidn
 brew install lzo
 brew install mas
+brew install modd
 brew install moreutils
 brew install nvm
 brew install oniguruma

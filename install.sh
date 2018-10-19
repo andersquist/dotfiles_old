@@ -10,6 +10,7 @@ echo "$(whoami)            ALL = (ALL) NOPASSWD: ALL" | sudo tee "/etc/sudoers.d
 # Install applications
 ./brew.sh
 ./node.sh
+./other.sh
 ./zsh.sh
 ./macos.sh ultra
 
