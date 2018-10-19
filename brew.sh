@@ -24,6 +24,7 @@ brew install awscli
 brew install bash
 brew install bash-completion2
 brew install bash-completion@2
+brew install composer
 brew install coreutils
 brew install dark-mode
 brew install findutils
