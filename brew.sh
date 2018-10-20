@@ -27,6 +27,7 @@ brew install bash-completion@2
 brew install composer
 brew install coreutils
 brew install dark-mode
+brew install dnsmasq
 brew install findutils
 brew install gdbm
 brew install gettext
@@ -53,6 +54,7 @@ brew install mas
 brew install modd
 brew install moreutils
 brew install nvm
+brew install ngix
 brew install oniguruma
 brew install openssh
 brew install openssl
@@ -62,6 +64,7 @@ brew install pcre
 brew install pkg-config
 brew install python3
 brew install pipenv
+brew install php
 brew install readline
 brew install reattach-to-user-namespace
 brew install sbt
