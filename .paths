@@ -8,6 +8,7 @@ export PATH=${PATH}:~/source/tools/bin
 export CODE_DIR=~/source
 export GOPATH=~/go
 export PATH=${PATH}:${GOPATH}/bin
+export PATH=${PATH}:${HOME}/.composer/vendor/bin
 
 if type kubectl > /dev/null ; then
 	source <(kubectl completion zsh)
