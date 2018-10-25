@@ -28,6 +28,7 @@ brew install bazel
 brew install composer
 brew install coreutils
 brew install dark-mode
+brew install dep
 brew install dnsmasq
 brew install findutils
 brew install gdbm
