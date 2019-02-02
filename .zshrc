@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 fpath=("$HOME/.zsh/completion" "$HOME/.zfunctions" $fpath)
 zstyle ':completion:*' ignored-patterns 'kubectl.docker'
 autoload -U promptinit; promptinit
@@ -8,6 +10,12 @@ autoload -U colors; colors
 if [ $(echo $PATH | grep -c "/usr/local/bin") -eq 0 ]; then
   export PATH=${PATH}:/usr/local/bin
 fi
+
+# Stendahls specific
+export VAULT_ADDR=https://vault01.stendahls.net:8200
+# TODO:Check if the cert exist and warn or try and download it...
+export VAULT_CACERT=~/stendahls-ca-root.crt
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
 # Kubectl prompt
 # Skip for now
@@ -86,7 +94,9 @@ setopt HIST_VERIFY
 
 # Save the time and how long a command ran
 setopt EXTENDED_HISTORY
-
+~
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
+
+[ -s "~/.jabba/jabba.sh" ] && source "/.jabba/jabba.sh"
