@@ -17,6 +17,10 @@ export VAULT_ADDR=https://vault01.stendahls.net:8200
 export VAULT_CACERT=~/stendahls-ca-root.crt
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
+# To get react native to work...
+export PATH=$PATH:~/Library/Android/sdk/
+export PATH=$PATH:~/Library/Android/sdk/platform-tools
+
 # Kubectl prompt
 # Skip for now
 # source "$HOME/dotfiles/kubectl-prompt/kubectl.zsh"
@@ -99,4 +103,8 @@ setopt HIST_SAVE_NO_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 
+<<<<<<< HEAD
 [ -s "~/.jabba/jabba.sh" ] && source "/.jabba/jabba.sh"
+=======
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+>>>>>>> Andoid and yarn
