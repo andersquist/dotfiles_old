@@ -103,8 +103,6 @@ setopt HIST_SAVE_NO_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 
-<<<<<<< HEAD
 [ -s "~/.jabba/jabba.sh" ] && source "/.jabba/jabba.sh"
-=======
+
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
->>>>>>> Andoid and yarn
