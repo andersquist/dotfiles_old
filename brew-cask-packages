@@ -2,6 +2,7 @@ atom
 bankid
 caffeine
 chromedriver
+db-browser-for-sqlite
 discord
 docker
 dotnet-sdk

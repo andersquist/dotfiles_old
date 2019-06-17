@@ -106,3 +106,5 @@ setopt HIST_FIND_NO_DUPS
 [ -s "~/.jabba/jabba.sh" ] && source "/.jabba/jabba.sh"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+eval "$(rbenv init -)"

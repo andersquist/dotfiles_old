@@ -38,6 +38,7 @@ php
 pipenv
 pkg-config
 postgresql
+rbenv
 reattach-to-user-namespace
 sbt
 sbt@0.13
