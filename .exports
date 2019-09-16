@@ -20,3 +20,5 @@ export MANPAGER='less -X';
 
 export CODE_DIR=~/source
 
+export EDITOR=code
+

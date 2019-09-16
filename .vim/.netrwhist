@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/anders.quist/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/activesupport-5.2.2.1/lib/active_support'
+let g:netrw_dirhist_0='/Users/anders.quist/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/activesupport-5.2.2.1/lib'
+let g:netrw_dirhist_9='/Users/anders.quist/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/activesupport-5.2.2.1'
+let g:netrw_dirhist_8='/Users/anders.quist/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/activemodel-5.2.2.1/lib/active_model'
+let g:netrw_dirhist_7='/Users/anders.quist/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/activemodel-5.2.2.1/lib'
+let g:netrw_dirhist_6='/Users/anders.quist/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/activemodel-5.2.2.1'
+let g:netrw_dirhist_5='/Users/anders.quist/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/activemodel-5.2.2.1/lib'
+let g:netrw_dirhist_4='/Users/anders.quist/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/activemodel-5.2.2.1'
+let g:netrw_dirhist_3='/Users/anders.quist/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/activemodel-5.2.2.1/lib/active_model'
+let g:netrw_dirhist_2='/Users/anders.quist/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/activemodel-5.2.2.1/lib'

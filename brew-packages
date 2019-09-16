@@ -27,7 +27,6 @@ lzo
 mas
 maven
 modd
-mongodb
 moreutils
 mysql-client
 nginx
@@ -42,10 +41,8 @@ postgresql
 rbenv
 reattach-to-user-namespace
 sbt
-sbt@0.13
 scala
 screen
-selenium-server-standalone
 shellcheck
 socat
 ssh-copy-id

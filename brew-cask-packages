@@ -9,9 +9,11 @@ dotnet-sdk
 dropbox
 font-source-code-pro
 google-chrome
+graphiql
+firefox
 iterm2-beta
+insomnia
 java
-java8
 jetbrains-toolbox
 microsoft-office
 minikube
@@ -22,6 +24,7 @@ shiftit
 snagit
 sonos
 spotify
+studio-3t
 vagrant
 visual-studio-code
 visualvm

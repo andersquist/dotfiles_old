@@ -12,7 +12,7 @@ echo "$(whoami)            ALL = (ALL) NOPASSWD: ALL" | sudo tee "/etc/sudoers.d
 ./node.sh
 ./other.sh
 ./zsh.sh
-./macos.sh ultra
+./macos.sh mega
 
 # Symlink dot-files
 for file in .*; do

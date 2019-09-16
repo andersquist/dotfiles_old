@@ -8,3 +8,4 @@ homebrew/cask-versions
 homebrew/core
 homebrew/services
 johanhaleby/kubetail
+mongodb/brew
