@@ -8,16 +8,10 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-for tap in $(cat brew-taps)
-do
-  brew tap ${tap}
-done
+# So that bundle supports App Store 
+brew install mas
 
-brew cask install $(< brew-cask-packages)
-
-brew install $(< brew-packages)
-
-# mas from Brewfile
+# Install from Brewfile
 brew bundle install
 
 # Remove outdated versions from the cellar.
@@ -25,5 +19,3 @@ brew cleanup
 
 # Accept Xcode license
 sudo xcodebuild -license accept
-
-brew link --force gettext

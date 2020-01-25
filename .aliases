@@ -106,13 +106,7 @@ alias path='echo -e ${PATH//:/\\n}'
 
 function de { docker exec -it $1 bash }
 
-#function kc { kubectl --context adfenix-$1-k8s.adfenix.com ${@:2}}
-
-#alias deploy ${ADFENIX_COURCE_DIR}/adfenix-build-tools/deploy
-
 function format { scalariform . -r -p=.scalariform.conf }
-
-#function pr { open 'https://github.com/pulls?user=adfenix' }
 
 function ecr  { eval $(aws ecr get-login | sed 's/-e none//g') }
 
@@ -313,3 +307,5 @@ alias gwX='git rm -rf'
 
 
 alias gitup='find . -type d -name .git -printf ''Updating repository %h\n'' -execdir git up \;'
+
+alias bup='brew upgrade && for cask in $(brew cask list); do brew cask info $cask | head -3 | grep -v "^http" | sed -e "/^$cask: /s/$cask: \([^ ]*\).*$/\1/" -e "/^.*\/$cask/s/\/usr\/local\/Caskroom\/$cask\/\(.*\) (.*)$/\1/" | paste -d " " - - | read current installed && if [[ "$current" != "$installed" ]]; then echo "Upgrading $cask from $installed to $current"; brew cask upgrade --greedy $cask; else echo "$cask:$current is latest version"; fi; done'

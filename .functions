@@ -1,0 +1,39 @@
+prepend_path() {
+    for arg in "$@"; do
+        if [[ ":${PATH}:" != *":${arg}:"* ]]; then
+            export PATH="${arg}${PATH:+":$PATH"}"
+        fi
+    done
+}
+
+append_path() {
+    for arg in "$@"; do
+        if [[ ":${PATH}:" != *":${arg}:"* ]]; then
+            export PATH="${PATH:+"$PATH:"}${arg}"
+        fi
+    done
+}
+
+b64d() {
+  echo "${1}" | base64 -d
+}
+
+# Format scala code
+function format { scalariform . -r -p=.scalariform.conf }
+
+# Open Github PullRequest view
+function pr { open 'https://github.com/pulls?user=inteleon' }
+
+# Login to AWS ECR
+function ecr  { eval $(aws ecr get-login --no-include-email) }
+
+function magic {
+  git co -b "${1// /_}"
+  if [ ! $(git ci -am "$1") ]
+  then
+    format
+    git ci -am "$1"
+  fi
+  gpc
+  hub pull-request  -m "$1"
+}

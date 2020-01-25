@@ -1,38 +1,15 @@
-#!/usr/bin/env bash
-
-fpath=("$HOME/.zsh/completion" "$HOME/.zfunctions" $fpath)
-zstyle ':completion:*' ignored-patterns 'kubectl.docker'
-autoload -U promptinit; promptinit
-autoload -U compinit && compinit
-autoload -U colors; colors
-
-# Workaround for path bug in PyCharm
-if [ $(echo $PATH | grep -c "/usr/local/bin") -eq 0 ]; then
-  export PATH=${PATH}:/usr/local/bin
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Stendahls specific
-export VAULT_ADDR=https://vault01.stendahls.net:8200
-# TODO:Check if the cert exist and warn or try and download it...
-export VAULT_CACERT=~/stendahls-ca-root.crt
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-
-# To get react native to work...
-export PATH=$PATH:~/Library/Android/sdk/
-export PATH=$PATH:~/Library/Android/sdk/platform-tools
-
-# Kubectl prompt
-# Skip for now
-# source "$HOME/dotfiles/kubectl-prompt/kubectl.zsh"
-
-# nvm
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# Disable autocorrect commands
+unsetopt CORRECT
 
 # Fish-like syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-for file in ~/.{paths,prompt,exports,aliases,functions,extra,auths}; do
+for file in ~/.{functions,exports,paths,prompt,aliases,extra,auths,historyopts}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done
 
@@ -44,67 +21,37 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower
 # Faster! (?)
 zstyle ':completion::complete:*' use-cache 1
 
-# case insensitive completion
-#zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
 # color code completion!!!!  Wohoo!
 zstyle ':completion:*' list-colors "=(#b) #([0-9]#)*=36=31"
 
-# Support CTRL-A CTRL-E
-bindkey -e
+autoload -U promptinit; promptinit
+autoload -U colors; colors
+autoload -Uz compinit && compinit -i
 
-# CTRL arrow naviation
-bindkey '^[[1;5D' backward-word
-bindkey '^[[1;5C' forward-word
+if type kubectl > /dev/null ; then
+	source <(kubectl completion zsh)
+fi
 
-# Prompt
-# optionally define some options
-PURE_CMD_MAX_EXEC_TIME=10
-prompt pure
+# AWS
+source /usr/local/share/zsh/site-functions/aws_zsh_completer.sh
 
+if [ -d "${HOME}/.kube/config.d" ];then
+  KUBECFG="${HOME}/.kube/config"
+  for file in ${HOME}/.kube/config.d/*.yaml; do
+    KUBECFG="${KUBECFG}:${file}"
+  done
+  export KUBECONFIG="${KUBECFG}"
+fi
 
-# History Stuff
+[ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
 
-# Where it gets saved
-HISTFILE=~/.history
+eval "$(direnv hook zsh)"
 
-SAVEHIST=1000000
-HISTSIZE=1000000
-
-# Don't overwrite, append!
-setopt APPEND_HISTORY
-
-# Write after each command
-# setopt INC_APPEND_HISTORY
-
-# Killer: share history between multiple shells
-# setopt SHARE_HISTORY
-
-# If I type cd and then cd again, only save the last one
-setopt HIST_IGNORE_DUPS
-
-# Even if there are commands inbetween commands that are the same, still only save the last one
-setopt HIST_IGNORE_ALL_DUPS
-
-# Pretty    Obvious.  Right?
-setopt HIST_REDUCE_BLANKS
-
-# If a line starts with a space, don't save it.
-setopt HIST_IGNORE_SPACE
-setopt HIST_NO_STORE
-
-# When using a hist thing, make a newline show the change before executing it.
-setopt HIST_VERIFY
-
-# Save the time and how long a command ran
-setopt EXTENDED_HISTORY
-
-setopt HIST_SAVE_NO_DUPS
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_FIND_NO_DUPS
-
-[ -s "~/.jabba/jabba.sh" ] && source "/.jabba/jabba.sh"
-
-#export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 
 eval "$(rbenv init -)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
+[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
